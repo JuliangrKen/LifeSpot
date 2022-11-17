@@ -28,11 +28,6 @@ header {
     color: darkgreen
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-}
-
 aside {
     height: 100%; /* Высота в полный размер. Этот параметр можно убрать, если вы хотите выставлять высоту автоматически */
     width: 10%;
