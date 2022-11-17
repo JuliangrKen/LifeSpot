@@ -9,6 +9,15 @@
     padding-left: 15%;
 }
 
+    .navbar p {
+        color: aquamarine;
+    }
+
+        .navbar p:hover {
+            color: forestgreen;
+        }
+
+
 header {
     padding-left: 1%;
 }
