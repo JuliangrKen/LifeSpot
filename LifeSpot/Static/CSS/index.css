@@ -48,3 +48,7 @@ aside {
 body {
     padding-left: 11%;
 }
+
+header, footer, body, .video-container {
+    background-color: mintcream;
+}
