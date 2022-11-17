@@ -55,7 +55,7 @@ header, footer, body, .video-container {
 
 footer {
     position: absolute;
-    bottom: 0;
+    bottom: auto;
     font-size: medium;
     color: dimgrey;
     line-height: 66%;
