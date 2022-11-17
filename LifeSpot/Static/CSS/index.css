@@ -8,3 +8,7 @@
 .video-container {
     display: inline-block;
 }
+
+header, footer, aside, body, .navbar, .video-container {
+    font-family: cursive, sans-serif;
+}
