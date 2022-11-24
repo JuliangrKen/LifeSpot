@@ -7,7 +7,12 @@
 </head>
 <body>
     <script>
-        alert("Приветствуем на LifeSpot! " + new Date().toLocaleString());
+        let input = prompt("Введите ваш возраст")
+
+        if (input < 18) {
+            window.location.href = "http://www.google.com"
+        }
+
     </script>
     <header id="header-index">
         <!--Заголовок страницы-->
