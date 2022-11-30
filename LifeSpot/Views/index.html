@@ -4,31 +4,18 @@
     <meta charset="UTF-8">
     <title>LifeSpot</title>
     <link href="Static/CSS/index.css" rel="stylesheet" type="text/css">
+    <script src="../Static/JS/index.js"></script>
+    <script>
+        handleSession();
+    </script>
 </head>
 <body>
-    <script src="../Static/JS/index.js"></script>
     <header id="header-index">
         <!--Заголовок страницы-->
         <h1>LifeSpot - прямые трансляции с улиц</h1>
         <!--Параграф-->
         <p>Покажем, что происходит прямо сейчас</p>
         <input type="text" id="mainInput" oninput="getElements()" size=50>
-        <script>
-            const inp = document.querySelector("input")
-
-            function getElements() {
-                const elements = document.querySelectorAll('.video-container');
-
-                elements.forEach(element => {
-                    const videoTitle = element.innerText
-
-                    if (!videoTitle.toLowerCase().includes(inp.value.toLowerCase()))
-                        element.style.display = 'none'
-                    else
-                        element.style.display = 'inline-block'
-                })
-            }
-        </script>
     </header>
     <aside id="sidebar">
         <div class="navbar">
