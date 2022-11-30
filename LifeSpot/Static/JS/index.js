@@ -1,4 +1,4 @@
-﻿function handleSession() {
+﻿let sessionHandler = function handleSession() {
     // создадим объект Map для хранения сессии
     let session = new Map();
     // Сохраним UserAgent
@@ -24,7 +24,7 @@
     }
 }
 
-function getElements() {
+let contentFilter = function filterContent() {
     const inp = document.querySelector("input")
     const elements = document.querySelectorAll('.video-container');
 
