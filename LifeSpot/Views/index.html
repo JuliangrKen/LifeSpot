@@ -12,12 +12,23 @@
         <h1>LifeSpot - прямые трансляции с улиц</h1>
         <!--Параграф-->
         <p>Покажем, что происходит прямо сейчас</p>
-        <input type="text" oninput="
-             let elements = document.getElementsByTagName('input');
-             let element = elements[0];
-             let elementText = element.value;
-             alert(elementText)
-        " size=50>
+        <input type="text" id="mainInput" oninput="getElements()" size=50>
+        <script>
+            const inp = document.querySelector("input")
+
+            function getElements() {
+                const elements = document.querySelectorAll('.video-container');
+
+                elements.forEach(element => {
+                    const videoTitle = element.innerText
+
+                    if (!videoTitle.toLowerCase().includes(inp.value.toLowerCase()))
+                        element.style.display = 'none'
+                    else
+                        element.style.display = 'inline-block'
+                })
+            }
+        </script>
     </header>
     <aside id="sidebar">
         <div class="navbar">
