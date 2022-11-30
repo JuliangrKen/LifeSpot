@@ -24,14 +24,13 @@
     }
 }
 
-let contentFilter = function filterContent() {
-    const inp = document.querySelector("input")
+function filterContent(userInput) {
     const elements = document.querySelectorAll('.video-container');
 
     elements.forEach(element => {
         const videoTitle = element.innerText
 
-        if (!videoTitle.toLowerCase().includes(inp.value.toLowerCase()))
+        if (!videoTitle.toLowerCase().includes(userInput.value.toLowerCase()))
             element.style.display = 'none'
         else
             element.style.display = 'inline-block'

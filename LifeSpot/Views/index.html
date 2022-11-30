@@ -15,7 +15,7 @@
         <h1>LifeSpot - прямые трансляции с улиц</h1>
         <!--Параграф-->
         <p>Покажем, что происходит прямо сейчас</p>
-        <input type="text" id="mainInput" oninput="contentFilter()" size=50>
+        <input type="text" id="mainInput" oninput="filterContent(document.querySelector('input'))" size=50>
     </header>
     <aside id="sidebar">
         <div class="navbar">
