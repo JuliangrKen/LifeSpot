@@ -22,7 +22,7 @@ function printSession(session) {
     }
 }
 
-function filterContent(inputParseFunction) {
+function filterContent() {
     const userInput = inputParseFunction()
     const elements = document.querySelectorAll('.video-container');
 

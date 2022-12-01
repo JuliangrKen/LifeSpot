@@ -16,11 +16,12 @@
         <h1>LifeSpot - прямые трансляции с улиц</h1>
         <!--Параграф-->
         <p>Покажем, что происходит прямо сейчас</p>
-        <input type="text" id="mainInput" oninput="
-            filterContent(function () {
+        <script>
+            inputParseFunction = function () {
                 return document.querySelector('input')
-            })
-        " size=50>
+            }
+        </script>
+        <input type="text" oninput="filterContent()" size=50>
     </header>
     <aside id="sidebar">
         <div class="navbar">
