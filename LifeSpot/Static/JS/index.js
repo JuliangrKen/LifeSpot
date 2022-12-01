@@ -1,19 +1,27 @@
-﻿function handleSession() {
-    let session = new Map();
-    session.set("userAgent", window.navigator.userAgent)
-    session.set("age", prompt("Пожалуйста, введите ваш возраст"))
+﻿let session = new Map();
 
-    if (session.get("age") >= 18) {
-        let startDate = new Date().toLocaleString();
+function checkAge() {
+    let input = prompt("Пожалуйста, введите ваш возраст")
 
-        alert("Приветствуем на LifeSpot! " + '\n' + "Текущее время: " + startDate);
-        session.set("startDate", startDate)
+    if (input >= 18) {
+        alert("Приветствуем на LifeSpot! " + '\n' + "Текущее время: " + new Date().toLocaleString());
     } else {
         alert("Наши трансляции не предназначены для лиц моложе 18 лет. Вы будете перенаправлены");
         window.location.href = "http://www.google.com"
     }
 
-    return session
+    return input
+}
+
+function handleSession() {
+    session.set("startDate", new Date().toLocaleString())
+    session.set("userAgent", window.navigator.userAgent)
+}
+
+let sessionLog = function logSession() {
+    for (let result of session) {
+        console.log(result)
+    }
 }
 
 function printSession(session) {
