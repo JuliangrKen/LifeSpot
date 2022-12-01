@@ -43,3 +43,7 @@ function filterContent() {
             element.style.display = 'inline-block'
     })
 }
+
+setTimeout(() => {
+    alert("Подпишитесь на наши социальные сети!")
+}, 60 * 1000)
