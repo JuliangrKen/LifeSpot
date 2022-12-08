@@ -17,13 +17,10 @@
         <!--Параграф-->
         <p>Покажем, что происходит прямо сейчас</p>
         <script>
-            checkAge();
-
-            handleSession()
-            sessionLog();
+            handleSession(logger, checker);
 
             const inputParseFunction = function () {
-                return document.querySelector('input')
+                return document.getElementsByTagName('input')[0].value.toLowerCase();
             }
         </script>
         <input type="text" oninput="filterContent()" size=50>
