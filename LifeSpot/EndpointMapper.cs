@@ -91,5 +91,23 @@ namespace LifeSpot
                 await context.Response.WriteAsync(html.ToString());
             });
         }
+
+        /// <summary>
+        ///  Маппинг JS
+        /// </summary>
+        public static void MapImages(this IEndpointRouteBuilder builder)
+        {
+            var imgFiles = new[] { "london.jpg", "ny.jpg", "spb.jpg" };
+
+            foreach (var fileName in imgFiles)
+            {
+                builder.MapGet($"/Views/Shared/Images/{fileName}", async context =>
+                {
+                    var imgPath = Path.Combine(Directory.GetCurrentDirectory(), "Views", "Shared", "Images", fileName);
+                    context.Response.ContentType = "image/jpg";
+                    await context.Response.Body.WriteAsync(File.ReadAllBytes(imgPath));
+                });
+            }
+        }
     }
 }
